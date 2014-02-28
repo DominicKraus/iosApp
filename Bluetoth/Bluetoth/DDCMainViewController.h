@@ -22,5 +22,4 @@
 @property (weak, nonatomic) IBOutlet UITextField *scaleText;
 @property (weak, nonatomic) IBOutlet UIButton *setScaleButton;
 
-
 @end

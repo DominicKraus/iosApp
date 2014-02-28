@@ -209,5 +209,7 @@
     
     NSLog(@"Try to send data to peripheral");
     [_discoveredPeripheral writeValue:data forCharacteristic:_discoveredCharacteristic type:CBCharacteristicWriteWithoutResponse];
+    
+    NSLog(@"Sent.");
 }
 @end
