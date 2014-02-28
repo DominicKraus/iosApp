@@ -18,7 +18,13 @@
 @interface DDCFlipsideViewController : UIViewController
 
 @property (weak, nonatomic) id <DDCFlipsideViewControllerDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UITableView *scaleTable;
+@property (weak, nonatomic) IBOutlet UISlider *brigthnessSlider;
+@property (weak, nonatomic) IBOutlet UIPickerView *unitPicker;
+
 
 - (IBAction)done:(id)sender;
+- (IBAction)didChangeBrightnessValue:(id)sender;
+
 
 @end

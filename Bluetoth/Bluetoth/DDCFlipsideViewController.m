@@ -49,4 +49,10 @@
     [self.delegate flipsideViewControllerDidFinish:self];
 }
 
+- (IBAction)didChangeBrightnessValue:(id)sender {
+}
+
+- (IBAction)didChangeBrighnessValue:(id)sender {
+}
+
 @end

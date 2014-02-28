@@ -201,7 +201,8 @@
 
 -(void)viewWillDisappear:(BOOL)animated{
     NSLog(@"StoppedScan");
-    [_centralManager stopScan];
+    if([_centralManager state] == CBCentralManagerStatePoweredOn)
+        [_centralManager stopScan];
 }
  
 - (IBAction)didTouchSetScale:(id)sender {
@@ -209,7 +210,5 @@
     
     NSLog(@"Try to send data to peripheral");
     [_discoveredPeripheral writeValue:data forCharacteristic:_discoveredCharacteristic type:CBCharacteristicWriteWithoutResponse];
-    
-    NSLog(@"Sent.");
 }
 @end
